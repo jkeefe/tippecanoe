@@ -1,5 +1,5 @@
 PREFIX ?= /usr/local
-MANDIR ?= $(PREFIX)/share/man/man1
+MANDIR ?= $(PREFIX)/share/man/man1/
 BUILDTYPE ?= Release
 SHELL = /bin/bash
 
@@ -31,7 +31,7 @@ install: tippecanoe tippecanoe-enumerate tippecanoe-decode tile-join tippecanoe-
 	cp tippecanoe-decode $(PREFIX)/bin/tippecanoe-decode
 	cp tippecanoe-json-tool $(PREFIX)/bin/tippecanoe-json-tool
 	cp tile-join $(PREFIX)/bin/tile-join
-	cp man/tippecanoe.1 $(MANDIR)/tippecanoe.1
+	# cp man/tippecanoe.1 $(MANDIR)/tippecanoe.1
 
 uninstall:
 	rm $(PREFIX)/bin/tippecanoe $(PREFIX)/bin/tippecanoe-enumerate $(PREFIX)/bin/tippecanoe-decode $(PREFIX)/bin/tile-join $(MANDIR)/tippecanoe.1 $(PREFIX)/bin/tippecanoe-json-tool
